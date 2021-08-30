@@ -19,6 +19,7 @@ route::get('/pedido', 'pedidosController@pedido')->name('site.pedido');
 
 route::get('/produtos/novo', 'produtosController@create')->name('site.produto');
 route::post('/produtos/novo', 'produtosController@store')->name('registrar_produto');
+route::get('/produtos/ver/{id}', 'produtosController@show')->name('paginal_produtos');
 
 route::get('/clientes', 'clientesController@create')->name('site.cliente');
 route::post('/clientes', 'clientesController@store')->name('site.cliente');

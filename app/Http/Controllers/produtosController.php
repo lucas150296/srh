@@ -22,4 +22,9 @@ class produtosController extends Controller
 
         return "Produto Criado com Sucesso!";
     }
+
+    public function show($id){
+        $produto = SiteProduto::findOrFail($id);
+        return view('show', ['produto' => $produto]);
+    }
 }
