@@ -19,4 +19,9 @@ class clientesController extends Controller
         
         return "cliente salvo";
     }
+
+    public function show($id){
+        $cliente = siteCliente::findOrFail($id);
+        return view('show_cliente', ['cliente' => $cliente]);
+    }
 }
